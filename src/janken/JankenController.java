@@ -12,6 +12,10 @@ public class JankenController {
          "グー", "チョキ", "パー"
      };
 
+     private int win = 0;
+     private int draw = 0;
+     private int lose = 0
+
       private Label cpuHandLabel;
       private Label myHandLabel;
       private Label resultLabel;
@@ -55,6 +59,14 @@ public class JankenController {
      private String getResult(int myHand, int cpuHand) {
          int r = (myHand - cpuHand + 3) % 3;
 
+         if(r == 2) {
+             win++;
+           } else if(r==1) {
+             lose++;
+           } else {
+             draw++;
+           }
+
          return (r == 2) ? "あなたの勝ち！" : ((r == 1) ? "あなたの負け！" : "あいこ！");
      }
      //自分の手・相手の手・じゃんけんの結果を各ラベルに表示
@@ -62,5 +74,6 @@ public class JankenController {
          cpuHandLabel.setText("コンピュータの手: " + hands[cpuHand]);
          myHandLabel.setText("あなたの手: " + hands[myHand]);
          resultLabel.setText("結果: " + getResult(myHand, cpuHand));
+         scoreLabel.setText(" Win:"+win+" Draw:"+draw+" Lose:"+lose);
      }
 }
