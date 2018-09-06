@@ -68,6 +68,8 @@ public class JankenView extends Application {
   resultLabel = new Label("じゃんけん結果:-");
   resultLabel.setFont(font);
 
+
+
   //HBox:水平方向に配置レイアウト
   HBox hbox = new HBox();
   //hboxの配置位置
