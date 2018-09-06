@@ -77,7 +77,7 @@ public class JankenView extends Application {
   hbox.setPadding(new Insets(10, 10, 10, 10));
   //hboxに配置するコントロールの隙間
   hbox.setSpacing(10);
-  //hboxにコントロールを設置
+  //hboxにコントロールを設
   hbox.getChildren().addAll(guButton, cyokiButton, paButton);
 
   //VBox：垂直方向に配置するレイアウト
